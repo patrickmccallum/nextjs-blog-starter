@@ -4,7 +4,7 @@ Hello! This is a starter site for a NextJS blog. It's been built to use MDX,
 Tailwind, and the App router. It's incredibly quick and easy to get started and
 change it to fit your purposes.
 
-Have a look at the demo site here, and read the accompanying blog post over here.
+Have a look at the [demo site here](https://nextjs-blog-starter-mu.vercel.app/), and read the accompanying [blog post over here](https://patsnacks.com/blog/building-nextjs-blog-2024).
 
 Out of the box it supports:
 
