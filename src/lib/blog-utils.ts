@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { ReactNode } from 'react'
 import { Metadata } from 'next'
+import slugify from 'slugify'
 
 // Define our types
 
@@ -147,12 +148,91 @@ export function getBlogPosts(options?: GetPostsOptions): Array<MdxBlogPage> {
     return posts
 }
 
-export function getBlogPostBySlug(slug: string): MdxBlogPage | undefined {
-    let posts = getBlogPosts({ includeUnpublished: true })
+/**
+ * Get blog post by slug
+ * @param slug - The slug of the blog post
+ * @param includeUnpublished - Include unpublished posts
+ * @returns The blog post
+ */
+export function getBlogPostBySlug(
+    slug: string,
+    includeUnpublished?: boolean
+): MdxBlogPage | undefined {
+    let posts = getBlogPosts({ includeUnpublished })
     return posts.find((post) => post.slug === slug)
 }
 
+/**
+ * Get blog post by the id defined in the metadata.json
+ * @param id - The id of the blog post
+ * @returns The blog post
+ */
 export function getBlogPostById(id: string): MdxBlogPage | undefined {
     let posts = getBlogPosts({ includeUnpublished: true })
     return posts.find((post) => post.id === id)
+}
+
+/**
+ * Gets blog posts by tag
+ * @param tag - The tag to filter by
+ * @param includeUnpublished - Include unpublished posts
+ * @returns An array of blog posts
+ */
+export function getBlogPostsByTag(
+    tag: string,
+    options?: {
+        includeUnpublished?: boolean
+        isSlugified?: boolean
+    }
+): Array<MdxBlogPage> {
+    let posts = getBlogPosts({
+        includeUnpublished: options?.includeUnpublished,
+    })
+
+    if (options?.isSlugified) {
+        return posts.filter((post) =>
+            post.metadata.tags
+                .map((t) => slugify(t, { lower: true, strict: true }))
+                .includes(tag)
+        )
+    }
+
+    return posts.filter((post) => post.metadata.tags.includes(tag))
+}
+
+type GetTagsResult = {
+    name: string
+    slug: string
+    count: number
+    articles: Array<MdxBlogPage>
+}
+
+/**
+ * Gets all tags by popularity
+ * @returns Record of tags, popularity, and articles
+ */
+export function getAllTags(): Array<GetTagsResult> {
+    let posts = getBlogPosts()
+
+    let tags: Record<string, GetTagsResult> = {}
+
+    posts.forEach((post) => {
+        post.metadata.tags.forEach((tag) => {
+            if (tags[tag]) {
+                tags[tag]['count']++
+                tags[tag]['articles'].push(post)
+            } else {
+                tags[tag] = {
+                    name: tag,
+                    count: 1,
+                    articles: [post],
+                    slug: slugify(tag, { lower: true, strict: true }),
+                }
+            }
+        })
+    })
+
+    return Object.entries(tags)
+        .sort((a, b) => b[1].count - a[1].count)
+        .map(([tag]) => tags[tag])
 }

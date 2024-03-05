@@ -1,7 +1,7 @@
 {
     "id": "my-first-post",
-    "datePublished": "2024-03-01",
-    "tags": ["demo", "first post"],
+    "datePublished": "2024-01-01",
+    "tags": ["demo data", "first post"],
     "nextMetadata": {
         "title": "My first blog post",
         "description": "Come have a look at my first blog post, it's pretty good!",

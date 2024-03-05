@@ -41,11 +41,11 @@ export const FortuneTeller = () => {
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke="currentColor"
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M6.73 17.018a8 8 0 1 1 10.54 0" />

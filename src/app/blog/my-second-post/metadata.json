@@ -1,10 +1,10 @@
 {
     "id": "my-second-post",
     "datePublished": "2024-03-05",
-    "tags": ["demo", "second post"],
+    "tags": ["demo data", "fortune telling", "interactive"],
     "nextMetadata": {
         "title": "My SECOND blog post 🥳",
-        "description": "Let's talk about my second blog post for a second, it's got a pretty long description, but that's okay. :)",
+        "description": "Let's talk about my second blog post for a second, it's got a pretty long description, but that's okay, because we're just testing out the line clamp function!",
         "authors": [{ "name": "Me!", "url": "https://mysite.org" }],
         "keywords": ["second post", "blogging"],
         "openGraph": {

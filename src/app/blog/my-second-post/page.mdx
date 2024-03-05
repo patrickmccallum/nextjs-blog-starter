@@ -2,8 +2,6 @@ import metadataJson from './metadata.json'
 import BlogLayout from '@/app/blog/blog-layout.tsx'
 import {FortuneTeller} from './some-component.tsx'
 
-# My SECOND post
-
 Hey there, you're reading my second post. It's pretty cool, right?
 
 In the future I'm also going to add some other things to my blog such as
@@ -17,8 +15,8 @@ In the future I'm also going to add some other things to my blog such as
 
 <FortuneTeller />
 
-export const metadata = metadataJson.nextMetadata;
+export const metadata = metadataJson;
 
 export default function MDXPage({children}) {
-return <BlogLayout blogPost={metadata}>{children}</BlogLayout>;
+return <BlogLayout blogPostId={metadata.id}>{children}</BlogLayout>;
 }
