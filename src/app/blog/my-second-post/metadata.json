@@ -1,0 +1,15 @@
+{
+    "id": "my-second-post",
+    "datePublished": "2024-03-05",
+    "tags": ["demo", "second post"],
+    "nextMetadata": {
+        "title": "My SECOND blog post 🥳",
+        "description": "Let's talk about my second blog post for a second, it's got a pretty long description, but that's okay. :)",
+        "authors": [{ "name": "Me!", "url": "https://mysite.org" }],
+        "keywords": ["second post", "blogging"],
+        "openGraph": {
+            "type": "article",
+            "publishedTime": "2024-03-05"
+        }
+    }
+}

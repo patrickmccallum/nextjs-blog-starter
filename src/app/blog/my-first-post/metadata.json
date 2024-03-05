@@ -1,0 +1,15 @@
+{
+    "id": "my-first-post",
+    "datePublished": "2024-03-01",
+    "tags": ["demo", "first post"],
+    "nextMetadata": {
+        "title": "My first blog post",
+        "description": "Come have a look at my first blog post, it's pretty good!",
+        "authors": [{ "name": "Me!", "url": "https://mysite.org" }],
+        "keywords": ["first post", "blogging"],
+        "openGraph": {
+            "type": "article",
+            "publishedTime": "2024-03-05"
+        }
+    }
+}
