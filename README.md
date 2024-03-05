@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next Blog Stater
 
-## Getting Started
+Hello! This is a starter site for a NextJS blog. It's been built to use MDX,
+Tailwind, and the App router. It's incredibly quick and easy to get started and
+change it to fit your purposes.
 
-First, run the development server:
+Have a look at the demo site here, and read the accompanying blog post over here.
+
+Out of the box it supports:
+
+-   👨‍💻 MDX (with examples)
+-   ⏳ Auto releasing articles in the future
+-   🔍 SEO and OpenGraph tags
+-   🏷️ Tagging posts and exploring by tags
+-   🐦 Sharing posts on Twitter
+-   🌕 Dark mode
+
+It's been licensed under MIT, so feel free to use it for whatever you like.
+
+If you have questions, feel free to reach out to me on Twitter @patsnacks or
+open an issue on this repo... or even better, submit a PR!
+
+## Getting started
+
+To get started, clone this repository...
+
+```bash
+git clone
+```
+
+Then install the dependencies...
+
+```bash
+cd next-blog-starter
+npm install
+```
+
+To run the development server...
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to
+see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Next steps
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Once you have your site up and running, you'll want to start customizing it.
 
-## Learn More
+-   Change the header and footer in `src/app/template.tsx`
+-   Add a new blog post under `src/app/blog`, try just copying and pasting an
+    existing one and changing the content for the first try.
+-   Publish your site to Vercel, Netlify, or wherever you like. There are step-by-step
+    instructions in the blog post.
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributions are highly welcome, and I'm happy to help you get started.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Just open a pull request or issue to start the conversation.
 
-## Deploy on Vercel
+## Feature requests and future updates
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+My plan is to update this repo as Next releases updates and new features.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you have any feature requests or ideas, feel free to open an issue.
+
+Thanks for your interest. :)
