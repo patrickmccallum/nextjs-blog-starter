@@ -7,6 +7,14 @@ export default function GlobalTemplate({ children }: PropsWithChildren) {
             <header className="flex items-center gap-4 text-lg">
                 <Link href={'/'}>Home</Link>
                 <Link href={'/blog'}>Blog</Link>
+                <Link
+                    href={
+                        'https://github.com/patrickmccallum/nextjs-blog-starter'
+                    }
+                    className="ml-auto"
+                >
+                    GitHub
+                </Link>
             </header>
             <main>{children}</main>
             <footer className="flex justify-between border-t border-neutral-200 py-4 text-sm text-neutral-500 dark:border-neutral-600">
