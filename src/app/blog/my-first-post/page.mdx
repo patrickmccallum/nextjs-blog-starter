@@ -1,13 +1,16 @@
 import metadataJson from './metadata.json'
+import BlogLayout from '@/app/blog/blog-layout.tsx'
 
 export const AComponent = () => {
-return <strong>JSX!</strong>
+    return <strong>JSX!</strong>
 }
-
-# My first post
 
 Hello world, this is my first post.
 
 And, it works with <AComponent />
 
-export const metadata = metadataJson.nextMetadata;
+export const metadata = metadataJson;
+
+export default function MDXPage({children}) {
+    return <BlogLayout blogPostId={metadata.id}>{children}</BlogLayout>;
+}
