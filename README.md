@@ -25,7 +25,7 @@ open an issue on this repo... or even better, submit a PR!
 To get started, clone this repository...
 
 ```bash
-git clone
+git clone https://github.com/patrickmccallum/nextjs-blog-starter
 ```
 
 Then install the dependencies...
