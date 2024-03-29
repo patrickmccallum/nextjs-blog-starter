@@ -1,4 +1,5 @@
 import { cn } from '@/lib/style-utils'
+import Link, { LinkProps } from 'next/link'
 
 interface TypographyBaseProps {
     className?: string
@@ -47,4 +48,42 @@ export function TypographyListUnordered(props: any) {
 
 export function TypographyListItem(props: any) {
     return <li className="text-base">{props.children}</li>
+}
+
+export function TypographyLead({ children, className }: TypographyBaseProps) {
+    return (
+        <p
+            className={cn(
+                'text-muted-foreground dark:text-muted/80 text-xl',
+                className,
+            )}
+        >
+            {children}
+        </p>
+    )
+}
+
+export function TypographyLink({
+    children,
+    className,
+    ...props
+}: TypographyBaseProps & LinkProps & { target?: string }) {
+    return (
+        <Link
+            {...props}
+            referrerPolicy={'no-referrer'}
+            className={cn(
+                'font-semibold',
+                'text-primary-bg',
+                'dark:text-primary-foreground',
+                'underline-offset-7 underline-6 underline decoration-dashed underline-offset-4',
+                'hover:decoration-primary hover:decoration-solid',
+                'dark:hover:decoration-primary-foreground',
+                'focus-visible:decoration-primary-foreground focus-visible:decoration-solid',
+                className,
+            )}
+        >
+            {children}
+        </Link>
+    )
 }

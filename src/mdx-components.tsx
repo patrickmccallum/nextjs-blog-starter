@@ -2,6 +2,7 @@ import type { MDXComponents } from 'mdx/types'
 import {
     TypographyH1,
     TypographyH2,
+    TypographyLink,
     TypographyListItem,
     TypographyListOrdered,
     TypographyListUnordered,
@@ -17,5 +18,21 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         ol: TypographyListOrdered,
         ul: TypographyListUnordered,
         li: TypographyListItem,
+        a: (props) => (
+            <TypographyLink
+                href={props.href!}
+                target={'_blank'}
+            >
+                {props.children}
+            </TypographyLink>
+        ),
+        link: (props) => (
+            <TypographyLink
+                href={props.href!}
+                target={'_blank'}
+            >
+                {props.children}
+            </TypographyLink>
+        ),
     }
 }
