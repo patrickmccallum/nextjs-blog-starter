@@ -4,16 +4,19 @@ Hello! This is a starter site for a NextJS blog. It's been built to use MDX,
 Tailwind, and the App router. It's incredibly quick and easy to get started and
 change it to fit your purposes.
 
-Have a look at the [demo site here](https://nextjs-blog-starter-mu.vercel.app/), and read the accompanying [blog post over here](https://patsnacks.com/blog/building-nextjs-blog-2024).
+Have a look at the [demo site here](https://nextjs-blog-starter-mu.vercel.app/), and read the
+accompanying [blog post over here](https://patsnacks.com/blog/building-nextjs-blog-2024).
 
 Out of the box it supports:
 
--   👨‍💻 MDX (with examples)
--   ⏳ Auto releasing articles in the future
--   🔍 SEO and OpenGraph tags
--   🏷️ Tagging posts and exploring by tags
--   🐦 Sharing posts on Twitter
--   🌕 Dark mode
+- 👨‍💻 MDX (with examples)
+- ⏳ Auto releasing articles in the future
+- 🔍 SEO and OpenGraph tags with OG examples
+- 🏷️ Tagging posts and exploring by tags
+- 🐦 Sharing posts on Twitter
+- 🌕 Dark mode
+- 📸 Photos example
+- 💭 Opinionated prettier setup
 
 It's been licensed under MIT, so feel free to use it for whatever you like.
 
@@ -48,11 +51,11 @@ see the result.
 
 Once you have your site up and running, you'll want to start customizing it.
 
--   Change the header and footer in `src/app/template.tsx`
--   Add a new blog post under `src/app/blog`, try just copying and pasting an
-    existing one and changing the content for the first try.
--   Publish your site to Vercel, Netlify, or wherever you like. There are step-by-step
-    instructions in the blog post.
+- Change the header and footer in `src/app/template.tsx`
+- Add a new blog post under `src/app/blog`, try just copying and pasting an
+  existing one and changing the content for the first try.
+- Publish your site to Vercel, Netlify, or wherever you like. There are step-by-step
+  instructions in the blog post.
 
 ## Contributing
 
