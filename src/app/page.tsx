@@ -34,6 +34,8 @@ const SectionIntro = () => {
                 width={100}
                 height={100}
                 className="rounded-full"
+                placeholder={'blur'}
+                priority
             />
             <div>
                 <TypographyH1 className={'mt-0'}>
