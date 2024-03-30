@@ -15,7 +15,7 @@ Out of the box it supports:
 - 🏷️ Tagging posts and exploring by tags
 - 🐦 Sharing posts on Twitter
 - 🌕 Dark mode
-- 📸 Photos example
+- 📸 Photos example, with lightbox!
 - 💭 Opinionated prettier setup
 
 It's been licensed under MIT, so feel free to use it for whatever you like.

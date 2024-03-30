@@ -5,7 +5,7 @@ import Img1 from './image-1.jpeg'
 import Img2 from './image-2.jpeg'
 import Img3 from './image-3.jpeg'
 import Img4 from './image-4.jpeg'
-import Link from 'next/link'
+import { Lightbox } from '../../../components/lightbox'
 
 export const AComponent = () => {
     return <strong>JSX!</strong>
@@ -23,9 +23,11 @@ Have a look at these photos I took to celebrate the occasion 👇
     }
 >
     <div className={'relative h-52'}>
-        <Link
-            href={Img1.src}
-            target={'_blank'}
+        <Lightbox
+            imageUrl={Img1.src}
+            caption={
+                "Inspirational words from someone called T. (Swift? I'm kidding.)"
+            }
         >
             <MdxImage
                 src={Img1}
@@ -37,12 +39,12 @@ Have a look at these photos I took to celebrate the occasion 👇
                 placeholder={'blur'}
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
             />
-        </Link>
+        </Lightbox>
     </div>
     <div className={'relative h-52 md:col-span-2'}>
-        <Link
-            href={Img2.src}
-            target={'_blank'}
+        <Lightbox
+            imageUrl={Img2.src}
+            caption={"A pretty cool wide shot that's kinda neat I think"}
         >
             <MdxImage
                 src={Img2}
@@ -52,12 +54,12 @@ Have a look at these photos I took to celebrate the occasion 👇
                 placeholder={'blur'}
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
             />
-        </Link>
+        </Lightbox>
     </div>
     <div className={'relative h-52 md:col-span-2'}>
-        <Link
-            href={Img4.src}
-            target={'_blank'}
+        <Lightbox
+            imageUrl={Img4.src}
+            caption={'Check out this cloud, looks like a dolphin...'}
         >
             <MdxImage
                 src={Img4}
@@ -67,12 +69,12 @@ Have a look at these photos I took to celebrate the occasion 👇
                 placeholder={'blur'}
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
             />
-        </Link>
+        </Lightbox>
     </div>
     <div className={'relative h-52'}>
-        <Link
-            href={Img3.src}
-            target={'_blank'}
+        <Lightbox
+            imageUrl={Img3.src}
+            caption={'Check out this cloud, looks like a dolphin...'}
         >
             <MdxImage
                 src={Img3}
@@ -82,7 +84,7 @@ Have a look at these photos I took to celebrate the occasion 👇
                 placeholder={'blur'}
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
             />
-        </Link>
+        </Lightbox>
     </div>
 </div>
 
