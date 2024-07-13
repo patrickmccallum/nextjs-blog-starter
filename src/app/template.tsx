@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { PropsWithChildren } from 'react'
-import {cn} from "@/lib/style-utils";
+import { cn } from '@/lib/style-utils'
 
 export default function GlobalTemplate({ children }: PropsWithChildren) {
     return (
@@ -8,6 +8,7 @@ export default function GlobalTemplate({ children }: PropsWithChildren) {
             <header className="flex items-center gap-4 text-lg">
                 <HeaderLink href={'/'}>Home</HeaderLink>
                 <HeaderLink href={'/blog'}>Blog</HeaderLink>
+                <HeaderLink href={'/work'}>Work</HeaderLink>
                 <HeaderLink
                     href={
                         'https://github.com/patrickmccallum/nextjs-blog-starter'
@@ -44,9 +45,19 @@ export default function GlobalTemplate({ children }: PropsWithChildren) {
     )
 }
 
-const HeaderLink = ({ href, className, children }: PropsWithChildren<{ href: string, className?: string }>) => {
+const HeaderLink = ({
+    href,
+    className,
+    children,
+}: PropsWithChildren<{ href: string; className?: string }>) => {
     return (
-        <Link href={href} className={cn("hover:decoration-solid underline decoration-dashed underline-offset-4", className)}>
+        <Link
+            href={href}
+            className={cn(
+                'underline decoration-dashed underline-offset-4 hover:decoration-solid',
+                className,
+            )}
+        >
             {children}
         </Link>
     )
